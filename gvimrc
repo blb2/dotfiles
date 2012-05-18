@@ -44,4 +44,15 @@ else
 	set printfont=Monospace\ 8
 endif
 
+" Toggle scroll bar if needed
+augroup ScrollbarViz
+	autocmd!
+	autocmd VimEnter,VimResized *
+		\ if line('$') > &lines |
+		\   set guioptions+=r   |
+		\ else                  |
+		\   set guioptions-=r   |
+		\ endif                 |
+augroup END
+
 :runtime! plugin/tohtml.vim
