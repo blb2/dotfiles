@@ -41,6 +41,10 @@ endif
 if has("autocmd")
 	filetype plugin indent on
 
+	augroup filetype
+		au! BufRead,BufNewFile *.proto setfiletype proto
+	augroup END
+
 	" Restore previous cursor position
 	augroup VimrcEx
 		autocmd!
