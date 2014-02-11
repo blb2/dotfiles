@@ -31,19 +31,15 @@ set tabstop=4                         " Tab spaces to 4
 
 vnoremap <BS> d                       " Delete a selection with backspace
 
-" Use syntax highlighting and switch on last search pattern if terminal has colors
-if &t_Co > 2 || has("gui_running")
-	syntax on
-	set hlsearch
-endif
-
 " Detect file type for syntax highlighting
 if has("autocmd")
-	filetype plugin indent on
-
 	augroup filetype
-		au! BufRead,BufNewFile *.proto setfiletype proto
+		autocmd!
+		autocmd BufRead,BufNewFile *.proto setfiletype proto
+		autocmd BufRead,BufNewFile *.md    setfiletype markdown
 	augroup END
+
+	filetype plugin indent on
 
 	" Restore previous cursor position
 	augroup VimrcEx
@@ -53,4 +49,15 @@ if has("autocmd")
 			\   exe "normal g`\""                            |
 			\ endif
 	augroup END
+endif
+
+" Use syntax highlighting and switch on last search pattern if terminal has colors
+if &t_Co > 2 || has("gui_running")
+	syntax on
+	set hlsearch
+endif
+
+" win32 specific settings
+if has("win32")
+	set directory=.,$TEMP
 endif

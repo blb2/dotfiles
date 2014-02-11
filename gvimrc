@@ -35,7 +35,6 @@ highlight Type      gui=none
 
 " gvim-win32 specific settings
 if has("win32")
-	set directory=.,$TEMP
 	set guifont=Lucida\ Console:h8
 	set printfont=Lucida\ Console:h8
 	source $VIMRUNTIME/mswin.vim
