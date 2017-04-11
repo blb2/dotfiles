@@ -32,6 +32,7 @@ set guitablabel=%{GuiTabLabel()}
 colorscheme desert
 highlight Statement gui=none
 highlight Type      gui=none
+highlight ModeMsg   gui=none
 
 " gvim-win32 specific settings
 if has("win32")
