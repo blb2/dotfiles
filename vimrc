@@ -28,6 +28,7 @@ set softtabstop=0                     " Disable this
 set shiftwidth=4                      " Shift width to 4
 set splitbelow                        " When splitting, bring it to the bottom
 set tabstop=4                         " Tab spaces to 4
+set cinoptions+=:0                    " Do not indent case labels
 
 vnoremap <BS> d                       " Delete a selection with backspace
 
