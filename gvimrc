@@ -27,6 +27,8 @@ function GuiTabLabel()
 	return label
 endfunction
 
+set lines=30 columns=125
+
 set guitablabel=%{GuiTabLabel()}
 
 colorscheme desert
