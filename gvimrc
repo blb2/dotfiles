@@ -27,8 +27,6 @@ function GuiTabLabel()
 	return label
 endfunction
 
-set lines=30 columns=125
-
 set guitablabel=%{GuiTabLabel()}
 
 colorscheme desert
@@ -38,6 +36,7 @@ highlight ModeMsg   gui=none
 
 " gvim-win32 specific settings
 if has("win32")
+	set lines=30 columns=125
 	set guifont=Lucida\ Console:h8
 	set printfont=Lucida\ Console:h8
 	source $VIMRUNTIME/mswin.vim
