@@ -15,7 +15,8 @@ if version >= 600
 endif
 set history=50                        " Limit history to 50 lines
 set incsearch                         " Incremental searching
-set listchars+=precedes:<,extends:>   " Indicate wrapping with < and >
+set linebreak                         " When wrapping is on, wrap at a break character
+set listchars=precedes:<,extends:>,space:·,tab:>- " Indicate wrapping with < and > along with characters to show for list mode
 set matchpairs=(:),{:},[:],<:>        " Match pairs for when % is pressed
 set noexpandtab                       " Use tabs, not spaces
 set nosmarttab                        " Use tabs, not spaces
