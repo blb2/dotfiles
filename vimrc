@@ -58,6 +58,11 @@ if &t_Co > 2 || has("gui_running")
 	set hlsearch
 endif
 
+if &t_Co > 16
+	set colorcolumn=110
+	highlight ColorColumn ctermbg=darkblue
+endif
+
 " win32 specific settings
 if has("win32")
 	set directory=.,$TEMP
