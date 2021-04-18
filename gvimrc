@@ -34,8 +34,9 @@ highlight Statement gui=none
 highlight Type      gui=none
 highlight ModeMsg   gui=none
 
-set colorcolumn=110
-highlight ColorColumn guibg=black
+if &colorcolumn != 0
+	highlight ColorColumn guibg=black
+endif
 
 " gvim-win32 specific settings
 if has("win32")

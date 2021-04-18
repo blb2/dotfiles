@@ -32,12 +32,27 @@ set tabstop=4                         " Tab spaces to 4
 
 vnoremap <BS> d                       " Delete a selection with backspace
 
+" Use syntax highlighting and switch on last search pattern if terminal has colors
+if &t_Co > 2 || has("gui_running")
+	syntax on
+	set hlsearch
+endif
+
+if &t_Co > 16 || has("gui_running")
+	set colorcolumn=110
+	highlight ColorColumn ctermbg=darkblue
+endif
+
 " Detect file type for syntax highlighting
 if has("autocmd")
 	augroup filetype
 		autocmd!
 		autocmd BufRead,BufNewFile *.proto setfiletype proto
 		autocmd BufRead,BufNewFile *.md    setfiletype markdown
+		if &colorcolumn != 0
+			autocmd BufRead,BufNewFile *.md  setlocal colorcolumn=81
+			autocmd BufRead,BufNewFile *.txt setlocal colorcolumn=81
+		endif
 	augroup END
 
 	filetype plugin indent on
@@ -50,17 +65,6 @@ if has("autocmd")
 			\   exe "normal g`\""                            |
 			\ endif
 	augroup END
-endif
-
-" Use syntax highlighting and switch on last search pattern if terminal has colors
-if &t_Co > 2 || has("gui_running")
-	syntax on
-	set hlsearch
-endif
-
-if &t_Co > 16
-	set colorcolumn=110
-	highlight ColorColumn ctermbg=darkblue
 endif
 
 " win32 specific settings
