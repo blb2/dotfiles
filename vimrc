@@ -49,6 +49,8 @@ if has("autocmd")
 		autocmd!
 		autocmd BufRead,BufNewFile *.proto setfiletype proto
 		autocmd BufRead,BufNewFile *.md    setfiletype markdown
+		autocmd BufRead,BufNewFile *.inf   setfiletype dosini
+		autocmd BufRead,BufNewFile *.inx   setfiletype dosini
 		if &colorcolumn != 0
 			autocmd BufRead,BufNewFile *.md  setlocal colorcolumn=81
 			autocmd BufRead,BufNewFile *.txt setlocal colorcolumn=81
