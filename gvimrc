@@ -45,8 +45,9 @@ if has("win32")
 	set printfont=Lucida\ Console:h8
 	source $VIMRUNTIME/mswin.vim
 else
-	set guifont=Monospace\ 8
-	set printfont=Monospace\ 8
+	set lines=30 columns=125
+	set guifont=Monospace\ 10
+	set printfont=Monospace\ 10
 endif
 
 " Toggle scroll bar if needed
