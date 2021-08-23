@@ -1,9 +1,10 @@
 #!/bin/sh
 
-echo Copying vimrc ...
+echo Copying vim configuration
 cp vimrc ~/.vimrc
 cp gvimrc ~/.gvimrc
-
-echo Copying vimfiles ...
 [ -d ~/.vim ] && rm -r ~/.vim
 cp -a vim ~/.vim
+
+echo Copying tmux configuration ...
+cp -a tmux.conf ~/.tmux.conf
