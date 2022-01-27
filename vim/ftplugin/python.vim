@@ -1,1 +1,2 @@
 setlocal expandtab
+let g:python_recommended_style = 0
