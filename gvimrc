@@ -41,8 +41,8 @@ endif
 " gvim-win32 specific settings
 if has("win32")
 	set lines=30 columns=125
-	set guifont=Lucida\ Console:h8
-	set printfont=Lucida\ Console:h8
+	set guifont=Consolas:h9
+	set printfont=Consolas:h9
 	source $VIMRUNTIME/mswin.vim
 else
 	set lines=30 columns=125
