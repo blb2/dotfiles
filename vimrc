@@ -29,8 +29,7 @@ set softtabstop=0                     " Disable this
 set shiftwidth=4                      " Shift width to 4
 set splitbelow                        " When splitting, bring it to the bottom
 set tabstop=4                         " Tab spaces to 4
-
-vnoremap <BS> d                       " Delete a selection with backspace
+set number                            " Show line numbers
 
 " Use syntax highlighting and switch on last search pattern if terminal has colors
 if &t_Co > 2 || has("gui_running")
@@ -41,6 +40,7 @@ endif
 if &t_Co > 16 || has("gui_running")
 	set colorcolumn=110
 	highlight ColorColumn ctermbg=darkblue
+	highlight LineNr ctermfg=darkgray
 endif
 
 " Detect file type for syntax highlighting

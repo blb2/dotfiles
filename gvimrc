@@ -33,6 +33,7 @@ colorscheme desert
 highlight Statement gui=none
 highlight Type      gui=none
 highlight ModeMsg   gui=none
+highlight LineNr    guifg=#555555
 
 if &colorcolumn != 0
 	highlight ColorColumn guibg=black
