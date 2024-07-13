@@ -30,6 +30,7 @@ set shiftwidth=4                      " Shift width to 4
 set splitbelow                        " When splitting, bring it to the bottom
 set tabstop=4                         " Tab spaces to 4
 set number                            " Show line numbers
+set noswapfile                        " Disable use of swapfiles
 
 " Use syntax highlighting and switch on last search pattern if terminal has colors
 if &t_Co > 2 || has("gui_running")

@@ -1,2 +1,2 @@
 setlocal nobackup
-setlocal noswapfile
+"setlocal noswapfile
