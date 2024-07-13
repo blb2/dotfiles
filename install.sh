@@ -1,9 +1,11 @@
 #!/bin/sh
 
+echo Removing previous configuration
+[ -f ~/.vimrc  ] && rm    ~/.vimrc
+[ -f ~/.gvimrc ] && rm    ~/.gvimrc
+[ -d ~/.vim    ] && rm -r ~/.vim
+
 echo Copying vim configuration
-cp vimrc ~/.vimrc
-cp gvimrc ~/.gvimrc
-[ -d ~/.vim ] && rm -r ~/.vim
 cp -a vim ~/.vim
 
 echo Copying tig configuration
