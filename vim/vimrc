@@ -16,7 +16,7 @@ endif
 set history=50                        " Limit history to 50 lines
 set incsearch                         " Incremental searching
 set linebreak                         " When wrapping is on, wrap at a break character
-set listchars=precedes:<,extends:>,space:·,tab:>- " Indicate wrapping with < and > along with characters to show for list mode
+set listchars=precedes:<,extends:>,space:ï¿½,tab:>- " Indicate wrapping with < and > along with characters to show for list mode
 set matchpairs=(:),{:},[:],<:>        " Match pairs for when % is pressed
 set noexpandtab                       " Use tabs, not spaces
 set nosmarttab                        " Use tabs, not spaces
@@ -39,7 +39,7 @@ if &t_Co > 2 || has("gui_running")
 endif
 
 if &t_Co > 16 || has("gui_running")
-	set colorcolumn=110
+	set colorcolumn=111
 	highlight ColorColumn ctermbg=darkblue
 	highlight LineNr ctermfg=darkgray
 endif
