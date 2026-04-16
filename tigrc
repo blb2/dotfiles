@@ -1,2 +1,3 @@
 set tab-size = 4
 set line-graphics = auto
+set main-view-author-maxwidth = 20
